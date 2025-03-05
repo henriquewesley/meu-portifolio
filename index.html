@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Wesley Henrique | Portifólio</title>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>
+          <a class="efeito-cursor-header">Home</a>
+        </li>
+        <li>
+          <a class="efeito-cursor-header">Projetos</a>
+        </li>
+        <li>
+          <a class="efeito-cursor-header">Sobre</a>
+        </li>
+        <li>
+          <a class="efeito-cursor-header">Contatos</a>
+        </li>
+      </ul>
+    </header>
+    <section class="principal">
+      <div>
+        <h1>Olá, eu sou <span>Wesley Henrique</span>.</h1>
+        <p>
+          Desenvolvedor criativo, focado em construir experiências digitais
+          excepcionais e interfaces intuitivas.
+        </p>
+        <a class="botao efeito-cursor">Ver projetos</a>
+      </div>
+    </section>
+    <section class="secao">
+      <h2 class="titulo-secao">Projetos</h2>
+      <div class="grade-projetos">
+        <img
+          class="img-projeto"
+          src="./img/img-instagram-wh.png"
+          alt="imagem-tela-principal-instagram"
+        />
+        <div class="info-projeto">
+          <h3>Instagram - Page inicial</h3>
+          <p>
+            Este projeto cria um layout visual para uma página de login do
+            Instagram, com imagens, formulário e links. A parte lógica e
+            interativa da página utilizei o JavaScript, além de HTML e CSS.
+          </p>
+          <a>Ver projeto</a>
+        </div>
+        <img
+          class="img-projeto"
+          src="./img/img-mario-e-luigi.png"
+          alt="imagem-site-mario-e-luigi"
+        />
+        <div class="info-projeto">
+          <h3>Mario Brothers</h3>
+          <p>
+            Desenvolvi um website promocional divertido e interativo para os
+            icônicos Encanadores Mario & Luigi. O projeto visa simular a
+            presença online de uma empresa de encanamento fictícia, utilizando a
+            temática do universo de Mario Bros e as tecnologias HTML, CSS e
+            JavaScript
+          </p>
+          <a>Ver projeto</a>
+        </div>
+      </div>
+    </section>
+    <section class="secao">
+      <h2 class="titulo-secao">Sobre mim</h2>
+      <div class="sobre-mim">
+        <img src="/img/Wesley Henrique.jpg" alt="foto-de-perfil" />
+        <div class="texto-sobre-mim">
+          <h2>
+            Desenvolvedor dedicado a superar desafio com melhoria contínua
+          </h2>
+          <p>
+            Sou desenvolvedor front-end em formação, bacharel em Engenharia de
+            Produção e técnico em Automação Industrial. Essa combinação me
+            proporcionou um forte entendimento de processos, eficiência e
+            integração de tecnologias HTML, CSS e JavaScript. Gosto do trabalho
+            em equipe, sou proativo, dinâmico, tenho bom relacionamento
+            interpessoal e com clientes. Minha experiência prévia me ensinou a
+            trabalhar de forma estratégica, comunicativa e orientada a
+            resultados. Se você procura um profissional determinado, com sede de
+            aprendizado e visão sistêmica, vamos nos conectar!
+
+            <br /><br />Wesley Henrique <br />whenfeof@gmail.com
+          </p>
+          <div class="habilidades">
+            <span class="tag-habilidades">HTML</span>
+            <span class="tag-habilidades">CSS</span>
+            <span class="tag-habilidades">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="secao">
+      <h2 class="titulo-secao">Contatos</h2>
+      <div class="botoes-contatos">
+        <a href="https://www.linkedin.com/in/henriquewesley/" class="botao-contato linkedin" target="_blank">
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/henriquewesley" class="botao-contato github" target="_blank">
+          <span>GitHub</span>
+        </a>
+        <a href="mailto:whenfeof@gmail.com" class="botao-contato email" target="_blank">
+          <span>E-mail</span>
+        </a>
+        <a href="https://wa.me/+5571981543804?text=Ol%C3%A1%2C%20vi%20seu%20portif%C3%B3lio%20e%20quero%20saber%20mais%20sobre%20voc%C3%AA." class="botao-contato whatsapp" target="_blank">
+          <span>WhatsApp</span>
+        </a>
+    </section>
+    <footer>Desenvolvido por Wesley Henrique ® 2025</footer>
+    <div class="cursor"></div>
+  </body>
+  <script>
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener('mousemove', function (info) {
+      cursor.style.left = info.clientX + 'px';
+      cursor.style.top = info.clientY + 'px';
+    })
+  </script>
+</html>
