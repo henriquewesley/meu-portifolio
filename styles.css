@@ -108,6 +108,7 @@ ul {
 .info-projeto p {
   color: #bbb;
   margin-bottom: 15px;
+  justify-content: justify;
 }
 
 .info-projeto a {
