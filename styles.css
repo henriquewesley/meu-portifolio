@@ -20,20 +20,30 @@ body {
 }
 
 .contatos {
-  height: 100vh;
+  height: 90vh;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 30px;
   padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* Garante que o cabeçalho fique acima do conteúdo */
 }
 
 header a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+
+header img {
+  width: 50px;
 }
 
 ul {
@@ -89,12 +99,6 @@ ul {
   gap: 30px;
 }
 
-.card-projeto {
-  background-color: #161616;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
 .img-projeto {
   width: 100%;
   height: 200px;
@@ -128,7 +132,7 @@ ul {
 }
 
 .sobre-mim img {
-  max-width: 100%;
+  max-width: 60%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -212,16 +216,6 @@ footer {
   padding: 30px;
   text-align: center;
   font-size: 18px;
-  color: #fd8727;
-}
-
-.efeito-cursor {
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.efeito-cursor:hover {
-  transform: translateY(-10px);
   color: #fd8727;
 }
 
