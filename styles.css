@@ -311,9 +311,18 @@ footer {
   }
 
   .titulo-secao {
-    font-size: large;
+    font-size: 25px;
     margin: 0 5px;
+  }
 
+  .titulo-secao::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 110px;
+    height: 4px;
+    background-color: #fd8727;
   }
 
   .grade-projetos {
@@ -350,21 +359,37 @@ footer {
   .sobre-mim {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 5px auto 0;
   }
 
   .sobre-mim img {
     max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .texto-sobre-mim h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+    padding: 5px;
   }
 
   .texto-sobre-mim p {
     font-size: 16px;
-    padding-right: 0;
-    margin-bottom: 20px;
+    padding: 5px;
+    margin: 5px auto;
+  }
+
+  .contatos {
+    height: 75vh;
+    margin: 50px auto 5px;
+    padding: 5px;
+  }
+
+  .botoes-contatos {
+    width: 100%;
+    margin: 50px auto;
+  }
+
+  footer {
+    height: 15vh;
+    font-size: 16px;
+  }
+
+  footer p {
+    display: none;
   }
 }
