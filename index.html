@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <img src="./img/logo.png" alt="logo-portifólio" />
+    <img src="./assets/logo.png" alt="logo-portifólio" />
     <ul>
       <a onclick="cliqueiHome()" class="efeito-cursor-header" id="ir-home"><svg xmlns="http://www.w3.org/2000/svg"
           width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
@@ -39,7 +39,7 @@
         </svg> Contatos</a>
     </ul>
   </header>
-  <section class="principal">
+  <section class="principal" id="home">
     <div>
       <h1>Olá, eu sou <span>Wesley Henrique ®</span>.</h1>
       <h2>
@@ -50,37 +50,68 @@
         sempre o meu melhor.</p>
     </div>
   </section>
-  <section class="secao projetos">
-    <h2 class="titulo-secao" id="descer-projetos">Projetos</h2>
-    <div class="grade-projetos">
-      <img class="img-projeto" src="./img/img-mario-e-luigi.png" alt="imagem-site-mario-e-luigi" />
-      <div class="info-projeto">
-        <h3>Mario Brothers</h3>
-        <p>
-          Desenvolvi um website promocional divertido e interativo para os
-          icônicos Encanadores Mario & Luigi. O projeto visa simular a
-          presença online de uma empresa de encanamento fictícia, utilizando a
-          temática do universo de Mario Bros e as tecnologias HTML, CSS e
-          JavaScript
-        </p>
-        <a href="https://henriquewesley.github.io/mario-brothers/" target="_blank">Ver projeto</a>
+  <section class="secao projetos" id="projetos">
+    <h2 class="titulo-secao titulo-projeto">Projetos</h2>
+    <div class="carousel-container">
+      <a class="seta seta-esquerda"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+        </svg></a>
+      <div class="carrossel-projetos">
+        <div class="info-projeto">
+          <img class="img-projeto" src="./assets/img-mario-e-luigi.png" alt="imagem-site-mario-e-luigi" />
+          <h3>Mario Brothers</h3>
+          <p>
+            Desenvolvi um website promocional divertido e interativo para os
+            icônicos Encanadores Mario & Luigi. O projeto visa simular a
+            presença online de uma empresa de encanamento fictícia, utilizando a
+            temática do universo de Mario Bros e as tecnologias HTML, CSS e
+            JavaScript
+          </p>
+          <a href="https://henriquewesley.github.io/mario-brothers/" target="_blank">Ver projeto</a>
+        </div>
+        <div class="info-projeto">
+          <img class="img-projeto" src="./assets/img-instagram-wh.png" alt="imagem-tela-principal-instagram" />
+          <h3>Instagram - Page inicial</h3>
+          <p>
+            Este projeto cria um layout visual para uma página de login do
+            Instagram, com imagens, formulário e links. A parte lógica e
+            interativa da página utilizei o JavaScript, além de HTML e CSS.
+          </p>
+          <a href="https://instahomewh.netlify.app/" target="_blank">Ver projeto</a>
+        </div>
+        <div class="info-projeto">
+          <img class="img-projeto" src="./assets/inicial-screen-we-care.png" alt="inicial-screen-we-care" />
+          <h3>We care - Landing page para pets</h3>
+          <p>
+            Este projeto é uma landing page simples, mas elegante, para um serviço de cuidado de pets. Ele foi
+            desenvolvido
+            usando HTML e CSS, com foco em design responsivo para funcionar bem em diferentes dispositivos.
+          </p>
+          <a href="https://github.com/henriquewesley/We-care" target="_blank">Ver projeto</a>
+        </div>
+        <div class="info-projeto">
+          <img class="img-projeto" src="./assets/inicial-screen-wide.png" alt="inicial-screen-wide-coverage" />
+          <h3>Wide coverage location</h3>
+          <p>
+            Este projeto é uma landing page responsiva criada para promover um serviço de compartilhamento de viagens ou
+            um serviço com ampla cobertura geográfica.
+          </p>
+          <a href="https://github.com/henriquewesley/wide-coverade-location" target="_blank">Ver projeto</a>
+        </div>
       </div>
-      <img class="img-projeto" src="./img/img-instagram-wh.png" alt="imagem-tela-principal-instagram" />
-      <div class="info-projeto">
-        <h3>Instagram - Page inicial</h3>
-        <p>
-          Este projeto cria um layout visual para uma página de login do
-          Instagram, com imagens, formulário e links. A parte lógica e
-          interativa da página utilizei o JavaScript, além de HTML e CSS.
-        </p>
-        <a href="https://instahomewh.netlify.app/" target="_blank">Ver projeto</a>
-      </div>
+      <a class="seta seta-direita"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+        </svg></a>
     </div>
   </section>
-  <section class="secao sobre">
-    <h2 class="titulo-secao" id="sobre-mim">Sobre</h2>
+  <section class="secao sobre" id="sobre">
+    <h2 class="titulo-secao">Sobre</h2>
     <div class="sobre-mim">
-      <img src="/img/Wesley Henrique.jpg" alt="foto-de-perfil" />
+      <img src="/assets/Wesley Henrique.jpg" alt="foto-de-perfil" />
       <div class="texto-sobre-mim">
         <p>
           Nasci no ano de 1993, sou de Camaçari-BA e decidi fazer da programação a minha profissão.
@@ -112,8 +143,8 @@
       </div>
     </div>
   </section>
-  <section class="secao contatos">
-    <h2 class="titulo-secao contato" id="contatos">Contatos</h2>
+  <section class="secao contatos" id="contatos">
+    <h2 class="titulo-secao contato">Contatos</h2>
     <div class="botoes-contatos">
       <a href="https://www.linkedin.com/in/henriquewesley/" class="botao-contato linkedin" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
