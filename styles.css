@@ -134,7 +134,9 @@ ul {
 .info-projeto p {
   color: #bbb;
   margin-bottom: 15px;
+  display: flex;
   justify-content: justify;
+  align-items: center;
 }
 
 .info-projeto a {
@@ -181,7 +183,7 @@ ul {
 }
 
 .texto-sobre-mim p {
-  font-size: 30px;
+  font-size: 20px;
   padding-right: 20px;
   margin-right: 75px;
   margin-bottom: 20px;
