@@ -6,37 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/jpg" href="./assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="./script.js"></script>
-  <title>Wesley Henrique ® | Portifólio</title>
+  <title>Wesley Henrique ® | Portfólio</title>
 </head>
 
 <body>
   <header>
-    <ul>
-      <a onclick="cliqueiHome()" class="efeito-cursor-header" id="ir-home"><svg xmlns="http://www.w3.org/2000/svg"
-          width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-          <path
-            d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
-        </svg>Home</a>
-      <a onclick="cliqueiProjetos()" class="efeito-cursor-header" id="ir-projetos"><svg
-          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash"
-          viewBox="0 0 16 16">
-          <path
-            d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" />
-        </svg> Projetos</a>
-      <a onclick="cliqueiSobre()" class="efeito-cursor-header" id="ir-sobre"> <svg xmlns="http://www.w3.org/2000/svg"
-          width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
-          <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-          <path
-            d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
-        </svg> Sobre</a>
-      <a onclick="cliqueiContatos()" class="efeito-cursor-header" id="ir-contatos"><svg
-          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
-          viewBox="0 0 16 16">
-          <path
-            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-        </svg> Contatos</a>
+    <div class="menu-toggle" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2 3h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2zm0 5h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2zm0 5h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2z" />
+      </svg>
+    </div>
+    <ul id="menu" class="hidden">
+      <li><a onclick="cliqueiHome()" class="efeito-cursor-header" id="ir-home"><svg xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            <path
+              d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+          </svg>Home</a></li>
+      <li><a onclick="cliqueiProjetos()" class="efeito-cursor-header" id="ir-projetos"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash"
+            viewBox="0 0 16 16">
+            <path
+              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" />
+          </svg> Projetos</a></li>
+      <li><a onclick="cliqueiSobre()" class="efeito-cursor-header" id="ir-sobre"> <svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace"
+            viewBox="0 0 16 16">
+            <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+            <path
+              d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
+          </svg> Sobre</a></li>
+      <li><a onclick="cliqueiContatos()" class="efeito-cursor-header" id="ir-contatos"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
+            viewBox="0 0 16 16">
+            <path
+              d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+          </svg> Contatos</a></li>
     </ul>
   </header>
   <section class="principal" id="home">
@@ -47,7 +54,8 @@
         sempre o meu melhor.</p>
     </div>
     <div class="logo-home">
-      <img src="./assets/logo.png" alt="logo-portifólio" />
+      <img src="./assets/logo.png"
+        alt="Logo do portfólio de Wesley Henrique, apresentando seus projetos e habilidades" />
     </div>
   </section>
   <section class="secao projetos" id="projetos">
@@ -186,6 +194,7 @@
       <span class="direitos">Todos os direitos reservados.</span>
     </p>
   </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>

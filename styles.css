@@ -109,10 +109,6 @@ ul {
   flex-direction: row;
 }
 
-.carrossel-projetos::first-child {
-  display: block;
-}
-
 .img-projeto {
   width: 100%;
   height: 200px;
@@ -264,11 +260,11 @@ footer {
 
 .efeito-cursor-header {
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .efeito-cursor-header:hover {
-  transform: translateX(-10px);
+  transform: translateX(-15px);
   color: #fd8727;
 }
 
@@ -287,6 +283,18 @@ footer {
 
 
 @media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    /* Alinha os itens verticalmente */
+    display: none;
+    /* Inicialmente escondido */
+  }
+
+  header.active ul {
+    display: flex;
+    /* Mostra quando ativo */
+  }
+
   header {
     cursor: pointer;
     background-color: #0a0a0a;
@@ -353,7 +361,8 @@ footer {
   }
 
   .secao {
-    padding: 0;
+    padding: 20px;
+    /* Menos espaçamento */
   }
 
   .projetos {
@@ -439,5 +448,58 @@ footer {
 
   footer .direitos {
     display: none;
+  }
+
+  .hidden {
+    display: none;
+    /* Esconde o menu inicialmente */
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .img-projeto {
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+  }
+
+  .carrossel-projetos {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Um projeto por linha */
+    gap: 10px;
+    /* Espaço entre os projetos */
+  }
+
+  .principal h1 {
+    font-size: 24px;
+    /* Menor em telas pequenas */
+  }
+
+  .titulo-secao {
+    font-size: 25px;
+    /* Também menor */
+  }
+}
+
+@media (min-width: 769px) {
+  .hidden {
+    display: flex;
+    /* Exibe o menu em telas maiores */
+    flex-direction: row;
+    /* Alinha os itens horizontalmente */
+  }
+
+  #menu {
+    gap: 30px;
+    /* Espaçamento entre os links do menu */
   }
 }
