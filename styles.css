@@ -103,7 +103,7 @@ ul {
 }
 
 .carrossel-projetos {
-  width: 85vw;
+  width: 300vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -119,11 +119,10 @@ ul {
 }
 
 .info-projeto {
-  flex-direction: row;
-  width: 92vh;
-  height: 65vh;
+  width: 100%;
+  height: 80vh;
   /* margin-left: -120px; */
-  padding: 20px;
+  padding: 10px;
 }
 
 .info-projeto h3 {
@@ -281,22 +280,17 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.menu-toggle {
+  display: none;
+  /* Ocultar o ícone do menu para desktop */
+
+}
+
 
 @media (max-width: 768px) {
-  header ul {
-    flex-direction: column;
-    /* Alinha os itens verticalmente */
-    display: none;
-    /* Inicialmente escondido */
-  }
-
-  header.active ul {
-    display: flex;
-    /* Mostra quando ativo */
-  }
-
   header {
-    cursor: pointer;
+    padding: 0;
+    justify-content: center;
     background-color: #0a0a0a;
   }
 
@@ -306,8 +300,7 @@ footer {
   }
 
   header .efeito-cursor-header {
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.4s ease-in-out;
   }
 
   header .efeito-cursor-header:hover {
@@ -315,21 +308,44 @@ footer {
     color: #fd8727;
   }
 
+  .menu-toggle {
+    display: block;
+    /* Para o ícone do hamburguer aparecer */
+  }
+
+  .menu {
+    position: absolute;
+    /* Para posicionar exatamente onde eu quero que ele fique */
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #0a0a0a;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    max-height: 0;
+  }
+
+  .menu.ativo {
+    margin: 0 auto;
+    max-height: 250px;
+    padding: 25px 150px;
+    gap: 30px;
+  }
+
   .principal {
-    max-height: 100%;
-    max-width: 100%;
     margin: 0 auto;
     flex-direction: column-reverse;
   }
 
   .logo-home {
-    padding-top: 86.5px;
+    width: 100%;
     border-radius: 10px;
   }
 
   .principal h1 {
     font-size: 24px;
-    margin: auto 20px;
+    /* Menor em telas pequenas */
   }
 
   .principal p {
@@ -341,8 +357,7 @@ footer {
 
   .titulo-secao {
     font-size: 25px;
-    padding: 5px 0 0;
-    margin: 60px 0 0 20px;
+    /* Também menor */
   }
 
   .titulo-secao::after {
@@ -375,11 +390,13 @@ footer {
   }
 
   .carrossel-projetos {
-    width: 80%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    /* Um projeto por linha */
+    gap: 10px;
+    /* Espaço entre os projetos */
   }
+
 
   .info-projeto {
     width: 100%;
@@ -389,10 +406,12 @@ footer {
   }
 
   .img-projeto {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
   }
+
 
   .info-projeto h3 {
     font-size: large;
@@ -449,56 +468,17 @@ footer {
   footer .direitos {
     display: none;
   }
-
-  .hidden {
-    display: none;
-    /* Esconde o menu inicialmente */
-  }
-
-  .menu-toggle {
-    cursor: pointer;
-    /* Muda o cursor para indicar que é clicável */
-  }
-}
-
-@media (max-width: 768px) {
-
-
-  .img-projeto {
-    max-width: 100%;
-    /* Garante que a imagem não ultrapasse o contêiner */
-    height: auto;
-    /* Mantém a proporção da imagem */
-  }
-
-  .carrossel-projetos {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Um projeto por linha */
-    gap: 10px;
-    /* Espaço entre os projetos */
-  }
-
-  .principal h1 {
-    font-size: 24px;
-    /* Menor em telas pequenas */
-  }
-
-  .titulo-secao {
-    font-size: 25px;
-    /* Também menor */
-  }
 }
 
 @media (min-width: 769px) {
-  .hidden {
+  #menu {
     display: flex;
     /* Exibe o menu em telas maiores */
     flex-direction: row;
     /* Alinha os itens horizontalmente */
   }
 
-  #menu {
+  .menu {
     gap: 30px;
     /* Espaçamento entre os links do menu */
   }

@@ -2,12 +2,16 @@ const linkHome = document.querySelector("#ir-home");
 const linkProjetos = document.querySelector("#ir-projetos");
 const linkSobre = document.querySelector("#ir-sobre");
 const linkContatos = document.querySelector("#ir-contatos");
-const menuToggle = document.getElementById("menu-toggle");
-const menuList = document.getElementById("menu");
+let menuToggle = document.getElementById("menu-toggle");
+let menuList = document.getElementById("menu");
 
-
+menuToggle.addEventListener("click", () => {
+  // Alterna a classe do 'menu' para mostrar/ocultar o menu
+  menuList.classList.toggle("ativo");
+});
 
 function cliqueiHome() {
+  menuList.classList.remove("ativo");
   window.scrollTo({
     top: document.querySelector("#home").offsetTop,
     behavior: "smooth",
@@ -17,6 +21,7 @@ function cliqueiHome() {
 linkHome.addEventListener("click", cliqueiHome);
 
 function cliqueiProjetos() {
+  menuList.classList.remove("ativo");
   window.scrollTo({
     top: document.querySelector("#projetos").offsetTop,
     behavior: "smooth",
@@ -26,6 +31,7 @@ function cliqueiProjetos() {
 linkProjetos.addEventListener("click", cliqueiProjetos);
 
 function cliqueiSobre() {
+  menuList.classList.remove("ativo");
   window.scrollTo({
     top: document.querySelector("#sobre").offsetTop,
     behavior: "smooth",
@@ -35,6 +41,7 @@ function cliqueiSobre() {
 linkSobre.addEventListener("click", cliqueiSobre);
 
 function cliqueiContatos() {
+  menuList.classList.remove("ativo");
   window.scrollTo({
     top: document.querySelector("#contatos").offsetTop,
     behavior: "smooth",
@@ -68,8 +75,3 @@ setaDireita.addEventListener('click', proximoProjeto);
 setaEsquerda.addEventListener('click', projetoAnterior);
 
 mostrarProjeto(projetoAtual);
-
-menuToggle.addEventListener("click", () => {
-  // Alterna a classe 'hidden' para mostrar/ocultar o menu
-  menuList.classList.toggle("hidden");
-});
