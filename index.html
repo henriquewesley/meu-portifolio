@@ -19,24 +19,33 @@
       </svg>
     </div>
     <ul class="menu" id="menu">
-      <li><a onclick="cliqueiHome()" class="efeito-cursor-header" id="ir-home"><svg xmlns="http://www.w3.org/2000/svg"
+      <li>
+        <a onclick="cliqueiHome()" class="efeito-cursor-header" id="ir-home"><svg xmlns="http://www.w3.org/2000/svg"
             width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
             <path
               d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
-          </svg> Home</a></li>
-      <li><a onclick="cliqueiProjetos()" class="efeito-cursor-header" id="ir-projetos"><svg
-            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash"
+          </svg> Home
+        </a>
+      </li>
+      <li>
+        <a onclick="cliqueiProjetos()" class="efeito-cursor-header" id="ir-projetos">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash"
             viewBox="0 0 16 16">
             <path
               d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" />
-          </svg> Projetos</a></li>
-      <li><a onclick="cliqueiSobre()" class="efeito-cursor-header" id="ir-sobre"> <svg
-            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace"
-            viewBox="0 0 16 16">
+          </svg> Projetos
+        </a>
+      </li>
+      <li>
+        <a onclick="cliqueiSobre()" class="efeito-cursor-header" id="ir-sobre">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-person-workspace" viewBox="0 0 16 16">
             <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
             <path
               d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
-          </svg> Sobre</a></li>
+          </svg> Sobre
+        </a>
+      </li>
       <li><a onclick="cliqueiContatos()" class="efeito-cursor-header" id="ir-contatos"><svg
             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
             viewBox="0 0 16 16">
@@ -46,8 +55,8 @@
           </svg> Contatos</a></li>
     </ul>
   </header>
-  <section class="principal" id="home">
-    <div>
+  <main class="principal" id="home">
+    <div class="texto-home">
       <h1>Olá, eu sou <span>Wesley Henrique ®</span>.</h1>
       <p><br>Em um mundo cada vez mais digital, cada projeto é um sonho realizado. A vontade de realizar sonhos me
         impulsiona a entregar
@@ -57,7 +66,7 @@
       <img src="./assets/logo.png"
         alt="Logo do portfólio de Wesley Henrique, apresentando seus projetos e habilidades" />
     </div>
-  </section>
+  </main>
   <section class="secao projetos" id="projetos">
     <h2 class="titulo-secao titulo-projeto">Projetos</h2>
     <div class="carousel-container">
@@ -69,7 +78,8 @@
       <div class="carrossel-projetos">
         <div class="info-projeto">
           <a href="https://henriquewesley.github.io/mario-brothers/" target="_blank"><img class="img-projeto"
-              src="./assets/img-mario-e-luigi.png" alt="imagem-site-mario-e-luigi" /></a>
+              src="./assets/img-mario-e-luigi.png"
+              alt="Imagem do site Mario Brothers, que simula uma empresa de encanamento fictícia." /></a>
           <h3>Mario Brothers </h3>
           <p>
             Este projeto visa simular a presença online de uma empresa de encanamento fictícia, utilizando a
@@ -120,10 +130,11 @@
       <img src="/assets/Wesley Henrique.jpg" alt="foto-de-perfil" />
       <div class="texto-sobre-mim">
         <p>
-          Sou Wesley Henrique, profissional em transição de carreira para a programação.
+          Sou Wesley Henrique, profissional em transição de carreira para a área de desenvolvimento Full Stack.
           <br><br>
-          Atualmente em formação Full Stack Pro na Dev Club, domino tecnologias como HTML, CSS, Git, JavaScript e
-          irei aprender Node.JS, React
+          Atualmente em formação Full Stack Pro na Dev Club, já utilizo tecnologias como HTML, CSS, Git, GitHub,
+          JavaScript. Estou
+          aprendendo Node.js e irei aprender React
           e TypeScript.
           <br><br>
           Meus projetos, como um site dos encanadores irmãos Mario e um clone do Instagram (disponíveis no portfólio),

@@ -1,485 +1,725 @@
+/* Reset básico de margens e preenchimentos, definindo a caixa de modelo e a fonte padrão */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Faz com que o padding e a borda não aumentem a largura e altura do elemento */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Define a fonte padrão */
 }
 
+/* Estilos gerais do corpo da página */
 body {
   background: #0a0a0a;
-  color: #ffff;
+  /* Define a cor de fundo da página */
+  color: rgb(255, 255, 255);
+  /* Define a cor do texto */
 }
 
+/* Estilos do cabeçalho */
 header {
-  display: flex;
   align-items: center;
+  /* Alinha itens verticalmente no centro */
   gap: 30px;
+  /* Espaço entre os itens do cabeçalho */
   padding: 30px;
+  /* Preenchimento interno do cabeçalho */
   position: fixed;
+  /* Fixa o cabeçalho no topo da página */
   top: 0;
+  /* Posiciona o cabeçalho no topo */
   left: 0;
+  /* Posiciona o cabeçalho à esquerda */
   width: 100%;
+  /* Largura total do cabeçalho */
   z-index: 100;
   /* Garante que o cabeçalho fique acima do conteúdo */
 }
 
-header a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+/* Estilo para o botão de menu em telas pequenas */
+.menu-toggle {
+  display: none;
+  /* Oculta o ícone do menu para desktop */
 }
 
-ul {
+/* Estilos para o menu de navegação */
+.menu {
   display: flex;
-  gap: 50px;
+  /* Exibe os itens do menu em linha */
   list-style: none;
+  /* Remove as bolinhas da lista */
+  justify-content: space-around;
+  /* Distribui os itens igualmente */
 }
 
-.principal {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-  min-height: 100vh;
-}
-
-.logo-home {
-  width: 500px;
-  border-radius: 10px;
-  float: right;
-  margin: 0 auto;
-}
-
-.principal h1 {
-  font-size: 50px;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -2px;
-}
-
-.principal h1 span {
-  color: #fd8727;
-}
-
-.principal p {
-  font-size: 20px;
-  margin-bottom: 20px;
-  max-width: 500px;
-  color: #bbb;
-  text-align: justify;
-}
-
-.titulo-secao {
-  font-size: 42px;
-  margin-left: 50px;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.titulo-secao::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  width: 100px;
-  height: 4px;
-  background-color: #fd8727;
-}
-
-.secao {
-  padding: 80px 0 0;
-}
-
-.projetos {
-  height: 100vh;
-}
-
-.carousel-container {
-  width: 92vw;
-  height: 65vh;
-  padding-left: 50px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.carrossel-projetos {
-  width: 300vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-}
-
-.img-projeto {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  transition: transform 0.5s ease;
-  flex-shrink: 0;
-}
-
-.info-projeto {
-  width: 100%;
-  height: 80vh;
-  /* margin-left: -120px; */
-  padding: 10px;
-}
-
-.info-projeto h3 {
-  margin-bottom: 10px;
-}
-
-.info-projeto p {
-  color: #bbb;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: justify;
-  align-items: center;
-}
-
-.info-projeto a {
-  color: #fd8727;
-  font-weight: 500;
-}
-
-.seta {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  color: #0a0a0a;
-  background-color: #fd8727;
-  text-align: center;
-  line-height: 50px;
-  cursor: pointer;
-}
-
-.seta-esquerda {
-  left: 0;
-}
-
-.seta-direita {
-  right: 0;
-}
-
-.sobre-mim {
-  display: inline-flex;
-  align-items: center;
-}
-
-.sobre-mim img {
-  width: 550px;
-  padding: 0 50px 50px;
-  border-radius: 15px;
-}
-
-.texto-sobre-mim {
-  padding: 0 80px 50px;
-}
-
-.texto-sobre-mim p {
-  font-size: 20px;
-  color: #bbb;
-  text-align: justify;
-}
-
-.texto-sobre-mim a {
-  color: #fd8727;
-  font-weight: 500;
-}
-
-.habilidades {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.tag-habilidades {
-  background-color: #161616;
-  color: #fd8727;
-  padding: 8px 15px;
-  border-radius: 20px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.contatos {
-  height: 90vh;
-}
-
-.botoes-contatos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.botao-contato {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  font-weight: 500;
-  min-width: 160px;
-  background-color: #fd8727;
-  color: #fff;
-  text-decoration: none;
-}
-
-.linkedin {
-  background-color: #0a66c2;
-}
-
-.github {
-  background-color: #24292f;
-}
-
-.email {
-  background-color: #ff0000;
-}
-
-.whatsapp {
-  background-color: #25d366;
-}
-
-footer {
-  background-color: #161616;
-  padding: 30px;
-  text-align: center;
-  font-size: 18px;
-  color: #fd8727;
-}
-
+/* Estilos para os links do menu */
 .efeito-cursor-header {
+  color: #fff;
+  /* Cor do texto dos links */
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+  font-weight: bold;
+  /* Deixa o texto em negrito */
   cursor: pointer;
+  /* Muda o cursor para pointer ao passar o mouse */
+  position: relative;
+  /* Necessário para posicionar o ::after corretamente */
   transition: transform 0.5s ease-in-out;
+  /* Transição suave para transformação */
 }
 
+/* Estilo para o efeito visual ao passar o mouse (linha abaixo do link) */
+.efeito-cursor-header::after {
+  content: '';
+  /* Conteúdo vazio para o pseudo-elemento */
+  position: absolute;
+  /* Posiciona o elemento de forma absoluta em relação ao link */
+  left: 0;
+  /* Alinha à esquerda do link */
+  bottom: 0;
+  /* Alinha na parte inferior do link */
+  width: 0;
+  /* Começa com largura 0 */
+  height: 2px;
+  /* Altura da linha */
+  background-color: #fd8727;
+  /* Cor da linha */
+  transition: width 0.5s ease-in-out;
+  /* Transição suave para a largura */
+}
+
+/* Expande a largura da linha ao passar o mouse sobre o link */
+.efeito-cursor-header:hover::after {
+  width: 100%;
+  /* Aumenta a largura para 100% */
+}
+
+/* Efeito de transformação ao passar o mouse sobre o link */
 .efeito-cursor-header:hover {
   transform: translateX(-15px);
+  /* Move o link para a esquerda */
   color: #fd8727;
+  /* Muda a cor do texto ao passar o mouse */
 }
 
-.cursor {
+/* Estilos para a seção principal */
+.principal {
+  display: flex;
+  /* Exibe itens em linha */
+  align-items: center;
+  /* Alinha itens verticalmente no centro */
+  margin-left: 50px;
+  /* Margem à esquerda */
+  min-height: 100vh;
+  /* Altura mínima de 100% da altura da tela */
+}
+
+/* Estilos para a imagem do logo na seção principal */
+.logo-home {
+  width: 500px;
+  /* Largura da imagem do logo */
+  float: right;
+  /* Alinha a imagem à direita */
+  margin: 0 auto;
+  /* Centraliza a imagem */
+}
+
+/* Estilos para o título na seção principal */
+.principal h1 {
+  font-size: 50px;
+  /* Tamanho da fonte */
+  line-height: 1.1;
+  /* Espaçamento entre linhas */
+  margin-bottom: 20px;
+  /* Margem inferior */
+  letter-spacing: -2px;
+  /* Reduz o espaçamento entre letras */
+}
+
+/* Estilos para a parte em destaque do título */
+.principal h1 span {
+  color: rgb(253, 135, 39);
+  /* Cor destacada para a parte do título */
+}
+
+/* Estilos para o parágrafo na seção principal */
+.principal p {
+  font-size: 20px;
+  /* Tamanho da fonte */
+  margin-bottom: 20px;
+  /* Margem inferior */
+  max-width: 500px;
+  /* Largura máxima do parágrafo */
+  color: #bbb;
+  /* Cor do texto */
+  text-align: justify;
+  /* Justifica o texto */
+}
+
+/* Estilos para os títulos de seção */
+.titulo-secao {
+  font-size: 42px;
+  /* Tamanho da fonte */
+  margin-left: 50px;
+  /* Margem à esquerda */
+  margin-bottom: 10px;
+  /* Margem inferior */
+  position: relative;
+  /* Necessário para o pseudo-elemento ::after */
+}
+
+/* Estilo para a linha abaixo do título da seção */
+.titulo-secao::after {
+  content: "";
+  /* Conteúdo vazio para o pseudo-elemento */
+  position: absolute;
+  /* Posiciona o elemento de forma absoluta em relação ao título */
+  left: 0;
+  /* Alinha à esquerda do título */
+  bottom: -15px;
+  /* Alinha na parte inferior do título */
+  width: 100px;
+  /* Largura da linha */
+  height: 4px;
+  /* Altura da linha */
+  background-color: rgb(253, 135, 39);
+  /* Cor da linha */
+}
+
+/* Estilos para as seções */
+.secao {
+  padding: 80px 0 0;
+  /* Preenchimento superior */
+}
+
+/* Estilos para a seção de projetos */
+.projetos {
+  height: 120vh;
+  /* Altura total da seção */
+}
+
+/* Estilos para o contêiner do carrossel */
+.carousel-container {
+  display: flex;
+  /* Faz com que os itens dentro fiquem em linha */
+  overflow: hidden;
+  /* Esconde conteúdo que ultrapassa o contêiner */
+  position: relative;
+  /* Necessário para o posicionamento interno */
+  width: 100%;
+  /* Largura total da viewport */
+  max-width: 800px;
+  /* Largura máxima do carrossel */
+  margin: 0 auto;
+  /* Centraliza o carrossel */
+}
+
+/* Estilos para o carrossel de projetos */
+.carrossel-projetos {
+  display: flex;
+  /* Mantém os projetos em linha */
+  transition: transform 0.5s ease;
+  /* Transição suave ao mudar de projeto */
+}
+
+
+/* Estilos para as imagens dos projetos */
+.img-projeto {
+  width: 100%;
+  /* Largura total do contêiner */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  object-fit: cover;
+  /* Garante que a imagem cubra o espaço sem distorcer */
+  margin-bottom: 10px;
+  /* Margem inferior entre as imagens */
+}
+
+/* Estilos para as informações do projeto */
+.info-projeto {
+  flex: 0 0 100%;
+  /* Cada projeto ocupa 100% do contêiner */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Adiciona uma leve sombra para destaque */
+  padding: 10px;
+  /* Adiciona um pouco de espaço interno */
+  border-radius: 5px;
+  /* Arredonda os cantos do projeto */
+}
+
+/* Estilos para os títulos dos projetos */
+.info-projeto h3 {
+  font-size: 24px;
+  /* Tamanho da fonte */
+  margin-bottom: 10px;
+  /* Margem inferior */
+}
+
+/* Estilos para os parágrafos dentro das informações do projeto */
+.info-projeto p {
+  color: #bbb;
+  /* Cor do texto */
+  margin-bottom: 15px;
+  /* Margem inferior */
+  display: flex;
+  /* Exibe como flexbox */
+  justify-content: justify;
+  /* Justifica o conteúdo */
+  align-items: center;
+  /* Alinha verticalmente os itens */
+}
+
+/* Estilos para as setas de navegação do carrossel */
+.seta {
+  position: absolute;
+  /* Posiciona as setas de forma absoluta */
+  top: 50%;
+  /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  /* Ajusta a posição para o centro */
+  width: 50px;
+  /* Largura da seta */
+  height: 50px;
+  /* Altura da seta */
+  color: #0a0a0a;
+  /* Cor do texto */
+  background-color: #fd8727;
+  /* Cor de fundo da seta */
+  text-align: center;
+  /* Centraliza o texto dentro da seta */
+  line-height: 50px;
+  /* Alinha verticalmente o texto na seta */
+  border-radius: 50%;
+  /* Torna a seta circular */
+  cursor: pointer;
+  /* Muda o cursor para pointer ao passar o mouse */
+  font-size: 1.2em;
+  /* Tamanho da fonte dentro da seta */
+  z-index: 1;
+  /* Garante que as setas fiquem acima do conteúdo */
+}
+
+/* Estilos para a seta esquerda */
+.seta-esquerda {
+  left: 0;
+  /* Posiciona a seta à esquerda */
+}
+
+/* Estilos para a seta direita */
+.seta-direita {
+  right: 0;
+  /* Posiciona a seta à direita */
+}
+
+/* Estilos para a seção "Sobre Mim" */
+.sobre-mim {
+  display: inline-flex;
+  /* Exibe em linha com flexbox */
+  align-items: center;
+  /* Alinha verticalmente ao centro */
+}
+
+/* Estilos para a imagem na seção "Sobre Mim" */
+.sobre-mim img {
+  width: 300px;
+  /* Largura da imagem */
+  margin: 80px;
+  /* Margem ao redor da imagem */
+  border-radius: 50%;
+  /* Cantos arredondados na imagem */
+  box-shadow: -1px 2px 18px 51px rgba(253, 135, 39, 0.39);
+  /* Sombra ao redor da imagem */
+}
+
+/* Estilos para o texto na seção "Sobre Mim" */
+.texto-sobre-mim {
+  padding: 0 80px 50px;
+  /* Preenchimento interno */
+}
+
+/* Estilos para os parágrafos na seção "Sobre Mim" */
+.texto-sobre-mim p {
+  font-size: 20px;
+  /* Tamanho da fonte */
+  color: #bbb;
+  /* Cor do texto */
+  text-align: justify;
+  /* Justifica o texto */
+}
+
+/* Estilos para links na seção "Sobre Mim" */
+.texto-sobre-mim a {
+  color: #fd8727;
+  /* Cor do link */
+  font-weight: 500;
+  /* Peso da fonte do link */
+}
+
+/* Estilos para a seção de habilidades */
+.habilidades {
+  display: flex;
+  /* Exibe as tags em linha */
+  flex-wrap: wrap;
+  /* Permite quebra de linha quando necessário */
+  margin-top: 20px;
+  /* Margem superior */
+}
+
+/* Estilos para as tags de habilidades */
+.tag-habilidades {
+  background-color: #161616;
+  /* Cor de fundo da tag */
+  color: #fd8727;
+  /* Cor do texto da tag */
+  padding: 8px 15px;
+  /* Preenchimento interno da tag */
+  border-radius: 20px;
+  /* Cantos arredondados */
+  margin-right: 10px;
+  /* Margem à direita */
+  margin-bottom: 10px;
+  /* Margem inferior */
+  font-size: 14px;
+  /* Tamanho da fonte */
+  cursor: pointer;
+  /* Muda o cursor para pointer ao passar o mouse */
+}
+
+/* Estilos para a seção de contatos */
+.contatos {
+  height: 90vh;
+  /* Altura da seção de contatos */
+}
+
+/* Estilos para os botões de contato */
+.botoes-contatos {
+  display: flex;
+  /* Exibe os botões em linha */
+  flex-wrap: wrap;
+  /* Permite quebra de linha quando necessário */
+  gap: 20px;
+  /* Espaço entre os botões */
+  justify-content: center;
+  /* Centraliza os botões */
+  align-items: center;
+  /* Alinha verticalmente os botões */
+  max-width: 800px;
+  /* Largura máxima do contêiner de botões */
+  margin: 0 auto;
+  /* Centraliza o contêiner */
+}
+
+/* Estilos para os botões individuais de contato */
+.botao-contato {
+  display: flex;
+  /* Exibe o conteúdo do botão em linha */
+  align-items: center;
+  /* Alinha verticalmente ao centro */
+  gap: 10px;
+  /* Espaço entre o ícone e o texto do botão */
+  padding: 15px 25px;
+  /* Preenchimento interno do botão */
+  border-radius: 10px;
+  /* Cantos arredondados */
+  font-weight: 500;
+  /* Peso da fonte do botão */
+  min-width: 160px;
+  /* Largura mínima do botão */
+  background-color: #fd8727;
+  /* Cor de fundo do botão */
+  color: #fff;
+  /* Cor do texto do botão */
+  text-decoration: none;
+  /* Remove o sublinhado do link */
+}
+
+/* Estilos específicos para os botões de contato */
+.linkedin {
+  background-color: #0a66c2;
+  /* Cor de fundo específica para o botão do LinkedIn */
+}
+
+/* Estilos específicos para o botão de GitHub */
+.github {
+  background-color: #24292f;
+  /* Cor de fundo específica para o botão do GitHub */
+}
+
+/* Estilos para o botão de Email */
+.email {
+  background-color: #ff0000;
+  /* Cor de fundo específica para o botão de Email */
+}
+
+/* Estilos específicos para os botões de whatsapp */
+.whatsapp {
+  background-color: #25d366;
+  /* Cor de fundo específica para o botão do WhatsApp */
+}
+
+/* Estilos para o rodapé da página */
+footer {
+  background-color: #161616;
+  /* Cor de fundo do rodapé */
+  padding: 30px;
+  /* Preenchimento interno do rodapé */
+  text-align: center;
+  /* Alinha o texto ao centro */
+  font-size: 18px;
+  /* Tamanho da fonte no rodapé */
+  color: rgb(253, 135, 39);
+  /* Cor do texto no rodapé */
+}
+
+/* .cursor {
   pointer-events: none;
   position: fixed;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-color: #fd8727;
-  /* top: 0;
-  left: 0; */
+  //top: 0;
+  //left: 0;
   z-index: 99;
   transform: translate(-50%, -50%);
-}
+} */
 
-.menu-toggle {
-  display: none;
-  /* Ocultar o ícone do menu para desktop */
-
-}
-
-
+/* Media Query para telas menores */
 @media (max-width: 768px) {
   header {
     padding: 0;
+    /* Remove o preenchimento do cabeçalho */
     justify-content: center;
+    /* Centraliza o conteúdo do cabeçalho */
     background-color: #0a0a0a;
+    /* Cor de fundo do cabeçalho em telas pequenas */
   }
 
   header a {
     display: block;
+    /* Faz os links ocuparem toda a largura */
     font-size: 10px;
+    /* Tamanho da fonte dos links no cabeçalho */
   }
 
-  header .efeito-cursor-header {
-    transition: transform 0.4s ease-in-out;
-  }
 
-  header .efeito-cursor-header:hover {
-    transform: translateX(-10px);
-    color: #fd8727;
-  }
-
+  /* Para o ícone do hamburguer aparecer */
   .menu-toggle {
     display: block;
-    /* Para o ícone do hamburguer aparecer */
+    /* Exibe o botão de menu em telas pequenas */
+    padding: 10px;
+    /* Preenchimento interno do botão de menu */
   }
 
   .menu {
     position: absolute;
-    /* Para posicionar exatamente onde eu quero que ele fique */
+    /* Posiciona o menu de forma absoluta */
     top: 100%;
+    /* Coloca o menu logo abaixo do cabeçalho */
     left: 0;
+    /* Alinha o menu à esquerda */
     right: 0;
+    /* Alinha o menu à direita */
     background-color: #0a0a0a;
+    /* Cor de fundo do menu */
     flex-direction: column;
+    /* Exibe os itens do menu em coluna */
     overflow: hidden;
+    /* Esconde itens que ultrapassam o contêiner */
     transition: 0.3s ease-in-out;
+    /* Transição suave para a abertura/fechamento do menu */
     max-height: 0;
+    /* Altura máxima inicial do menu (fechado) */
   }
 
   .menu.ativo {
-    margin: 0 auto;
-    max-height: 250px;
-    padding: 25px 150px;
-    gap: 30px;
+    max-height: 350px;
+    /* Altura máxima do menu quando ativo */
+    padding: 0 150px;
+    /* Preenchimento do menu quando ativo */
+    gap: 5px;
+    /* Espaço entre os itens do menu */
+  }
+
+  .menu li {
+    margin: 0;
+    /* Remove margem dos itens do menu */
+    padding: 10px;
+    /* Preenchimento interno dos itens do menu */
   }
 
   .principal {
     margin: 0 auto;
+    /* Centraliza a seção principal */
+    padding: 150px 10px;
+    /* Preenchimento da seção principal */
     flex-direction: column-reverse;
+    /* Inverte a ordem dos itens */
   }
 
   .logo-home {
     width: 100%;
+    /* Faz a logo ocupar 100% da largura */
     border-radius: 10px;
+    /* Arredonda as bordas da logo */
   }
 
   .principal h1 {
     font-size: 24px;
+    /* Tamanho da fonte do título principal */
+    margin: 0 20px;
+    /* Margem do título principal */
     /* Menor em telas pequenas */
   }
 
   .principal p {
     font-size: 16px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    /* Tamanho da fonte do parágrafo */
+    margin: 0 20px 20px;
+    /* Margem do parágrafo */
     text-align: justify;
+    /* Justifica o texto do parágrafo */
   }
 
   .titulo-secao {
     font-size: 25px;
-    /* Também menor */
+    /* Tamanho da fonte do título da seção */
+    margin: 0 20px;
+    /* Margem do título da seção */
   }
 
   .titulo-secao::after {
     content: "";
+    /* Cria um pseudo-elemento após o título da seção */
     position: absolute;
+    /* Posiciona absolutamente o pseudo-elemento */
     left: 0;
+    /* Alinha à esquerda */
     bottom: -5px;
+    /* Posiciona abaixo do título */
     width: 110px;
+    /* Largura do pseudo-elemento */
     height: 4px;
+    /* Altura do pseudo-elemento */
     background-color: #fd8727;
-  }
-
-  .carousel-container {
-    height: 100vh;
-    width: 80vw;
+    /* Cor de fundo do pseudo-elemento */
   }
 
   .secao {
     padding: 20px;
-    /* Menos espaçamento */
+    /* Preenchimento da seção */
   }
 
   .projetos {
     max-height: 100vh;
+    /* Altura máxima da seção de projetos */
     margin: auto;
-    padding: 1px;
+    /* Centraliza a seção de projetos */
+    padding: 50px 10px;
+    /* Preenchimento da seção de projetos */
     display: flex;
+    /* Exibe os itens da seção de projetos em flexbox */
     flex-direction: column;
+    /* Organiza os itens em coluna */
     font-size: 10px;
+    /* Tamanho da fonte na seção de projetos */
+  }
+
+  .carousel-container {
+    flex-direction: column;
+    /* Muda para coluna em telas pequenas */
+    height: auto;
+    /* Altura automática em telas pequenas */
   }
 
   .carrossel-projetos {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Um projeto por linha */
-    gap: 10px;
-    /* Espaço entre os projetos */
+    display: block;
+    /* Muda para block para empilhar os projetos em telas pequenas */
   }
-
 
   .info-projeto {
     width: 100%;
-    height: 100%;
-    padding: 10px;
-    margin: 0;
+    /* Largura total do contêiner do projeto em telas pequenas */
+    margin: 10px 0;
+    /* Margem superior e inferior */
   }
-
-  .img-projeto {
-    max-width: 100%;
-    /* Garante que a imagem não ultrapasse o contêiner */
-    height: auto;
-    /* Mantém a proporção da imagem */
-  }
-
 
   .info-projeto h3 {
     font-size: large;
+    /* Tamanho da fonte do título do projeto */
   }
 
   .info-projeto p {
     color: #bbb;
+    /* Cor do texto na descrição do projeto */
   }
 
   .info-projeto a {
     color: #fd8727;
+    /* Cor do link na descrição do projeto */
     font-weight: 500;
+    /* Peso da fonte do link */
   }
 
   .sobre {
     margin-top: 20px;
+    /* Margem superior da seção sobre */
     max-height: 100%;
+    /* Altura máxima da seção sobre */
     padding: 20px;
+    /* Preenchimento da seção sobre */
   }
 
   .sobre-mim {
     display: grid;
+    /* Exibe os itens da seção sobre em grid */
     grid-template-columns: 1fr;
+    /* Um item por linha */
     margin: 5px auto 0;
+    /* Margem da seção sobre-mim */
   }
 
   .sobre-mim img {
     max-width: 100%;
+    /* Garante que a imagem não ultrapasse o contêiner */
     padding: 5px;
+    /* Preenchimento em volta da imagem */
   }
 
   .texto-sobre-mim p {
     font-size: 16px;
+    /* Tamanho da fonte do texto sobre mim */
     padding: 5px;
+    /* Preenchimento do parágrafo */
     margin: 5px auto;
+    /* Margem do parágrafo */
   }
 
   .contatos {
     height: 75vh;
+    /* Altura da seção de contatos */
     margin: 50px auto 5px;
+    /* Margem da seção de contatos */
     padding: 5px;
+    /* Preenchimento da seção de contatos */
   }
 
   .botoes-contatos {
     width: 100%;
+    /* Largura total dos botões de contatos */
     margin: 50px auto;
+    /* Margem dos botões de contatos */
   }
 
   footer {
     height: 15vh;
+    /* Altura do rodapé */
     font-size: 16px;
+    /* Tamanho da fonte no rodapé */
   }
 
   footer .direitos {
     display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  #menu {
-    display: flex;
-    /* Exibe o menu em telas maiores */
-    flex-direction: row;
-    /* Alinha os itens horizontalmente */
-  }
-
-  .menu {
-    gap: 30px;
-    /* Espaçamento entre os links do menu */
+    /* Esconde a seção de direitos no rodapé */
   }
 }
